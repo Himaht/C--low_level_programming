@@ -1,6 +1,6 @@
 #include "main.h"
 
-int wildcmp(char *s1, char *s2);
+int bandersnatch(char *s1, char *s2);
 char *move(char *s2);
 
 /**
@@ -74,7 +74,7 @@ int wildcmp(char *s1, char *s2)
  *
  * Return: return value of wildcmp() or of itself
  */
-int wildcmp(char *s1, char *s2)
+int bandersnatch(char *s1, char *s2)
 {
 	/**
 	 * if we reached the end of s1, return 0
@@ -85,7 +85,7 @@ int wildcmp(char *s1, char *s2)
 		return (0);
 	if (*s1 == *s2)
 		return (wildcmp(s1, s2));
-	return (wildcmp(s1 + 1, s2));
+	return (bandersnatch(s1 + 1, s2));
 }
 
 /**
